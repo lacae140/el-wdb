@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eugenia's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/form.css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <form method="post" action="show-data.php" enctype="multipart/form-data">
+        
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #A5C7BC;
+            color: #555555;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+
+        .h3,
+        h3 {
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="#">Eugenia Lacayo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li class="current-page"><a href="contact.html">CONTACT</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Container -->
+    <div class="container-fluid bg-2 text-center">
+        <h3 class="margin">Contact</h3>
+        <p class="inside">Please feel free to contact me if you have any questions or just to send a friendly Hello!</p>
+    <form method="post" action="show-data.php" autocomplete="off">
+        <fieldset>
+            <div class="fields">
+                <p class="row">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" class="field-large" required="required" autofocus="autofocus" />
+                </p>
+                <p class="row">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" class="field-large" required="required" />
+
+                </p>
+                <p class="row">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="field-large" required="required" />
+
+                </p>
+                <p class="row-questions">
+                    <label for="question-or-comment">Your question or comment</label>
+                    <textarea id="question-or-comment" name="question_or_comment" cols="20" rows="4" class="field-large" required="required"></textarea>
+                </p>
+            </div>
+
+        <div class="button-wrapper">
+            <input type="submit" value="Send" class="button" />
+        </div>
+    </fieldset>        
+            
+    </form>
+    </div>
+
+    <!-- Third Container (Grid) -->
+    <div class="container-fluid bg-3 text-center">
+        <h3 class="margin">Work</h3>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="img/media1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-4">
+                <img src="img/recycle.JPG" class="img-responsive margin" style="width:100%" alt="Image">
+                <img src="img/light.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-4">
+                <img src="img/magazine.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p>Eugenia Lacayo &copy; 2017</p>
+    </footer>
+
+</body>
+
+</html>
