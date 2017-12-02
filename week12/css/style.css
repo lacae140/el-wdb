@@ -1,0 +1,63 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+header {
+    max-width: 100%;
+    min-height: 5em;
+}
+
+.logo-type {
+    color: #fff;
+}
+
+.page-wrapper {
+    background-color: #2E4053;
+    min-height: 40em;
+    padding-top: 8em;
+    width: 100%;
+}
+
+.logo-box {
+    background-color: #EE5135;
+    border-color: #EE5135;
+    border-radius: 6em;
+    border-style: solid;
+    border-width: .5em;
+    display: block;
+    height: 20em;
+    margin: 0 auto;
+   transition: transform 2s;
+    width: 50%;
+}
+
+.logo-box:hover {
+    animation: grow 3s ease-in-out;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1, 1);
+        background-color: grey;
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+        background-color: lightgray;
+    }
+    100% {
+        transform: scale(1, 1);
+        background-color: grey;
+    }
+}
+
+.logo-type {
+    font-size: 6em;
+    position: relative;
+    text-align: center;
+}
+
+
