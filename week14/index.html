@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eugenia's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/form.css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #AEB6BF;
+            color: #555555;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #555555 !important;
+        }
+
+        .h3,
+        h3 {
+            font-size: 40px;
+        }
+
+        img:hover {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: #474e5d;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+            font: Montserrat, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="#">Eugenia Lacayo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="current-page"><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#work">WORK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- First Container -->
+    <div id="about" class="container-fluid bg-1 text-center">
+        <h3 class="margin">Who Am I?</h3>
+        <img src="img/me.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Myself" width="350" height="350">
+        <p>I am a nature freak, a sister, a student, a binge watcher, a food lover, an adventurer, a dreamer, a capable individual, and a proud Nicaraguan. </p>
+    </div>
+
+    <!-- Second Container -->
+    <div id="contact" class="container-fluid bg-2 text-center">
+        <h3 class="margin">Contact</h3>
+        <p class="inside">Please feel free to contact me if you have any questions or just to send a friendly Hello!</p>
+        <form method="post" action="show-data.php" autocomplete="off">
+            <fieldset>
+                <div class="fields">
+                    <p class="row">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" class="field-large" required="required" autofocus="autofocus" />
+                    </p>
+                    <p class="row">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" class="field-large" required="required" />
+
+                    </p>
+                    <p class="row">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="field-large" required="required" />
+
+                    </p>
+                    <p class="row-questions">
+                        <label for="question-or-comment">Your question or comment</label>
+                        <textarea id="question-or-comment" name="question_or_comment" cols="20" rows="4" class="field-large" required="required"></textarea>
+                    </p>
+                </div>
+
+                <div class="button-wrapper">
+                    <input type="submit" value="Send" class="button" />
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <!-- Third Container (Grid) -->
+    <div id="work" class="container-fluid bg-3 text-center">
+        <h3 class="margin">Work</h3>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container"><img src="img/media1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="media.html">Invented Media and Implication</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/aprropriation.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="appropriation.html">Appropriation Text Meaning</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/bosawas.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="bosawas.html">Natural Reserve Pamphlet</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="container"><img src="img/recycle.JPG" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="recycle.html">Recycle Project</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/light.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="light.html">Light My Fire</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/portrait2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="portrait.html">Mark Making Self Portrait</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/tribe.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="tribe.html">Design That Tune</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="container"><img src="img/magazine.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="flezipp.html">Flezipp Magazine</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/pockit.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="pockit.html">Pock It</a></div>
+                    </div>
+                </div>
+                <div class="container"><img src="img/demin.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <div class="middle">
+                        <div class="text"><a class="link" href="denim.html">Transforming and Redefining Stereotypes</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p>Eugenia Lacayo &copy; 2017</p>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" class="return-btn" title="Go to top">Top</button>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+</body>
+
+</html>
